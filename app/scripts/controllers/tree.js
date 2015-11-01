@@ -3,6 +3,6 @@
 angular.module('sdwn')
   .controller('TreeCtrl',['$scope', function ($scope) {
     var self = this;
-    self.person = 'kir';
+    self.person = 'form tree cont';
 
   }]);

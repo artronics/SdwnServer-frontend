@@ -60,10 +60,23 @@ angular
         .state('app.network',{
           url:'/network',
           abstract:true,
-          //template:'<p>foo</p>',
+
           views:{
             'tree':{
-              templateUrl:'views/network/networks.html'
+              templateUrl:'views/network/networks.html',
+              controllerAs:'tree',
+            },
+          },
+        },100)
+
+        .state('app.controller',{
+          url:'/controller',
+          abstract:true,
+
+          views:{
+            'tree':{
+              templateUrl:'views/controller/controllers.html',
+              controllerAs:'tree',
             },
           },
         },100)
@@ -75,8 +88,15 @@ angular
               templateUrl: 'views/network/setting.html'
             },
           },
-          //template:'setting',
-          controllerAs: 'navigation'
+        }, 100)
+
+        .state('app.controller.setting', {
+          url: '',
+          views:{
+            'content@app':{
+              templateUrl: 'views/controller/setting.html'
+            },
+          },
         }, 100)
 
          ;
