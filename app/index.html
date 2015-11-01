@@ -49,14 +49,11 @@
     </div>
 </div>
 
-<div ui-view ng-controller="MainCtrl" class="container-fluid">
+<div ng-controller="MainCtrl as main" class="container-fluid">
+  <div ui-view></div>
+  <!--<p ng-bind="main.test"></p>-->
 </div>
 
-<div class="footer">
-    <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-    </div>
-</div>
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -84,17 +81,23 @@
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
-<script src="bower_components/angular-ui-router/ui-router-0.2.15/release/angular-ui-router.js"></script>
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
 <script src="scripts/app.js"></script>
 <script src="scripts/states.js"></script>
 <script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/tree.js"></script>
+<script src="scripts/controllers/navigation.js"></script>
 <script src="scripts/services/service.js"></script>
 
 <!--include everything in scripts/ except files directly inside scripts (without subdirectory) -->
 <!-- include: "type": "js", "files": ["scripts/**/*.js", "!scripts/*.js"] -->
 
+<script src="scripts/controllers/navigation.js"></script>
 <!-- endbuild -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>-->
+<script src="bower_components/angular-ui-router/ui-router-0.2.15/release/angular-ui-router.js"></script>
+
 </body>
 </html>
